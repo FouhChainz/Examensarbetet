@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<center>
+<h1>Upload Sales Data</h1>
+<form method="post" enctype="multipart/form-data">
+    {% csrf_token %}
+    <label for="file">Select a CSV file:</label>
+    <input type="file" name="file" id="file">
+    <input type="submit" value="Upload">
+</form>
+
+
+{% if sales_data %}
+  <h2>Sales Data Uploaded Successfully</h2>
+  <p>Filename: {{ sales_data.name }}</p>
+  <p>File size: {{ sales_data.size }} bytes</p>
+{% endif %}
+
+</center>
+{% endblock %}
