@@ -35,13 +35,7 @@ bg_color="#3d6466"
 
 
 # Initierar seriell uppkoppling till vågen
-ser=serial.Serial(
-     port='/dev/ttyUSB0',
-     baudrate=9600,
-     parity=serial.PARITY_NONE,
-     stopbits=serial.STOPBITS_ONE,
-     bytesize=serial.EIGHTBITS,
-     timeout=None)
+#ser=serial.Serial(port='/dev/ttyUSB0',baudrate=9600, parity=serial.PARITY_NONE,stopbits=serial.STOPBITS_ONE,bytesize=serial.EIGHTBITS,timeout=None)
 
 # Skapa en funktion som skickar en signal till vågen som läser nuvarande vikt från våg
 def serial_write ():
