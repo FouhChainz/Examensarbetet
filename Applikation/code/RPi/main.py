@@ -35,13 +35,13 @@ bg_color="#3d6466"
 
 
 # Initierar seriell uppkoppling till vågen
-# ser=serial.Serial(
-#     port='/dev/ttyUSB0',
-#     baudrate=9600,
-#     parity=serial.PARITY_NONE,
-#     stopbits=serial.STOPBITS_ONE,
-#     bytesize=serial.EIGHTBITS,
-#     timeout=None)
+ser=serial.Serial(
+     port='/dev/ttyUSB0',
+     baudrate=9600,
+     parity=serial.PARITY_NONE,
+     stopbits=serial.STOPBITS_ONE,
+     bytesize=serial.EIGHTBITS,
+     timeout=None)
 
 # Skapa en funktion som skickar en signal till vågen som läser nuvarande vikt från våg
 def serial_write ():
@@ -546,10 +546,10 @@ def load_stats ():
 
         # Formatera kolumner, sätter deras bredd och centrering
         my_tree.column("#0", width=80)
-        my_tree.column("Datum", anchor=W, width=200)
-        my_tree.column("Vikt", anchor=W, width=150)
-        my_tree.column("Temp", anchor=W, width=150)
-        my_tree.column("Väder", anchor=W, width=150)
+        my_tree.column("Datum", anchor=W, width=150)
+        my_tree.column("Vikt", anchor=W, width=100)
+        my_tree.column("Temp", anchor=W, width=100)
+        my_tree.column("Väder", anchor=W, width=100)
 
 
 
