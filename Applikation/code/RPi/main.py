@@ -197,7 +197,6 @@ def load_main ():
         text="Väg produkt",
         width=50,
         height=9,
-        bg="#28393a",
         command=lambda:ny_sökning()
     ).pack(pady=20)
 
@@ -210,7 +209,6 @@ def load_main ():
         text="Tidigare vägningar",
         width=50,
         height=9,
-        bg="#28393a",
         command=lambda:se_statistik()
     ).pack(pady=20)
 
